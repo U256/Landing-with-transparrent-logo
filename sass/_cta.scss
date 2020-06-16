@@ -1,0 +1,82 @@
+.cta{
+   .cta__overlay{
+      background-image: linear-gradient(-60deg, #88d3ce 0%, #6e45e2 100%);
+      position: absolute;
+      top: 0; left: 0;
+      height: 100%;
+      width: 100%;
+      opacity: 0.8;
+      z-index: 0;
+   }
+   position: relative;
+   background: url(../images/world-map.png) no-repeat center;
+   background-size: auto;
+   .cta_body{      
+      position: relative;
+      z-index: 1;
+      color: #ffffff;
+      height: 70vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      .cta__pre-title{
+         font-family: "Maven Pro", sans-serif;
+         font-size: 1.4rem;
+         font-weight: 700;
+         text-transform: uppercase;
+         letter-spacing: 0.7px;
+      }
+      .cta__title{
+         font-family: "Maven Pro", sans-serif;
+         font-size: 60px;
+         font-weight: 500;
+         letter-spacing: -1.69px;
+      }
+      .cta__buttons{        
+         padding: 3vh;
+         font-family: "Maven Pro", sans-serif;
+         .cta__btn{
+            margin: 0 6px;
+            outline: none;
+            display: inline;
+            padding: 5px 0 9px 0;
+            border: none;
+            width: 190px;
+            height: 50px;
+            border-radius: 25px; 
+            background-color: #fff;
+            transition: 0.3s;
+            p{
+               color: #868b97;
+               font-family: "Maven Pro", sans-serif;
+               font-size: 12px;
+               font-weight: 700;
+               text-transform: uppercase;
+               letter-spacing: 0.6px;
+            }            
+         }
+         .cta__btn:hover{
+            outline: none;
+            display: inline;
+            padding: 5px 0 9px 0;
+            border: none;
+            width: 190px;
+            height: 50px;
+            border-radius: 25px; 
+            background-color: #6e45e2;
+            transition: 0.3s;
+            cursor: pointer;
+            p{ 
+               color: #ffffff;
+               font-family: "Maven Pro", sans-serif;
+               font-size: 12px;
+               font-weight: 700;
+               text-transform: uppercase;
+               letter-spacing: 0.6px;
+            }
+         }        
+      }
+   }
+}
