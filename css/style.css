@@ -1,7 +1,18 @@
+html {
+  font-size: 10px;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "Maven Pro", sans-serif;
+}
+
 .header {
   font-family: "Maven Pro",  sans-serif;
   color: #fff;
   height: 100vh;
+  min-height: 430px;
   position: relative;
   background: url(../images/glasses.png);
   background-size: cover;
@@ -40,7 +51,6 @@
 }
 
 .header__navigation-row {
-  margin-top: 3vh;
   height: 80px;
   width: 90%;
   display: -webkit-box;
@@ -59,22 +69,21 @@
 }
 
 .header__navigation-row .header__logo span {
-  font-family: "Maven Pro", sans-serif;
-  font-size: 30px;
+  font-size: 3rem;
   font-weight: 700;
-  line-height: 29px;
+  line-height: 33px;
   text-transform: uppercase;
   letter-spacing: 6px;
   position: absolute;
   top: 40%;
 }
 
-.header__navigation-row .header__links {
+.header__nav {
   width: 65%;
   max-width: 900px;
 }
 
-.header__navigation-row .header__links .header__nav ul {
+.header__nav ul {
   font-size: 1.6rem;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -90,7 +99,7 @@
   list-style-type: none;
 }
 
-.header__navigation-row .header__links .header__nav ul li .header__nav-a {
+.header__nav ul li a {
   line-height: 55px;
   display: block;
   height: 60px;
@@ -99,11 +108,11 @@
   padding: 0 7px;
 }
 
-.header__navigation-row .header__links .header__nav ul li .header__nav-a:hover {
+.header__nav ul li a:hover {
   border-bottom: 3px solid #fff;
 }
 
-.header__navigation-row .header__links .header__nav ul li .header__starter {
+.header__starter {
   display: block;
   margin-left: 60px;
   padding-top: 14px;
@@ -168,7 +177,6 @@
 .header__hero .header__hero-title {
   text-align: center;
   color: #ffffff;
-  font-family: "Maven Pro";
   font-size: 8.6rem;
   font-weight: 500;
   line-height: 72px;
@@ -179,7 +187,6 @@
   text-align: center;
   width: 383px;
   color: #ffffff;
-  font-family: "Maven Pro";
   font-size: 1.6rem;
   font-weight: 400;
   line-height: 26px;
@@ -203,13 +210,48 @@
   opacity: 0.7;
 }
 
+.header__m-fa {
+  display: none;
+}
+
+.header__m-fa i {
+  fill: #fff;
+}
+
+.m-menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  z-index: 10;
+  position: fixed;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  -webkit-transform: translateX(100%);
+          transform: translateX(100%);
+  right: 0;
+  top: 0;
+  height: 100vh;
+  width: 100%;
+  text-align: center;
+  font-size: 4rem;
+  line-height: 6rem;
+  background-image: -webkit-gradient(linear, left top, right top, from(#88d3ce1c), color-stop(20%, #6e45e2));
+  background-image: linear-gradient(90deg, #88d3ce1c 0%, #6e45e2 20%);
+}
+
 .subscriptions {
   -webkit-box-shadow: inset 0 -1px 0 #e8ebf1, inset 0 1px 0 #e8ebf1;
           box-shadow: inset 0 -1px 0 #e8ebf1, inset 0 1px 0 #e8ebf1;
   background-color: #f9fafc;
 }
 
-.subscriptions .subscriptions__body {
+.subscriptions__body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -224,7 +266,7 @@
   padding: 8vh 0;
 }
 
-.subscriptions .subscriptions__body .subscriptions__header-text {
+.subscriptions__header-text {
   width: 375px;
   height: 161px;
   margin: 0 auto;
@@ -232,17 +274,16 @@
   margin-bottom: 8.5vh;
 }
 
-.subscriptions .subscriptions__body .subscriptions__header-text .subscriptions__pre-title {
+.subscriptions__header-text .subscriptions__pre-title {
   margin-bottom: 1.7vh;
   color: #9fa4af;
-  font-family: "Maven Pro",  sans-serif;
   font-size: 14px;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.7px;
 }
 
-.subscriptions .subscriptions__body .subscriptions__header-text .subscriptions__pre-title:before {
+.subscriptions__header-text .subscriptions__pre-title:before {
   content: '';
   width: 20px;
   height: 1px;
@@ -252,7 +293,7 @@
   margin-right: 5px;
 }
 
-.subscriptions .subscriptions__body .subscriptions__header-text .subscriptions__pre-title:after {
+.subscriptions__header-text .subscriptions__pre-title:after {
   content: '';
   width: 20px;
   height: 1px;
@@ -263,24 +304,22 @@
   margin-left: 5px;
 }
 
-.subscriptions .subscriptions__body .subscriptions__header-text .subscriptions__title {
+.subscriptions__header-text .subscriptions__title {
   margin-bottom: 2.4vh;
   color: #4f4f6f;
-  font-family: "Maven Pro",  sans-serif;
   font-size: 60px;
   font-weight: 500;
   letter-spacing: -1.69px;
 }
 
-.subscriptions .subscriptions__body .subscriptions__header-text .subscriptions__subtitle {
+.subscriptions__header-text .subscriptions__subtitle {
   width: 384px;
   color: #9fa4af;
-  font-family: "Maven Pro",  sans-serif;
   font-size: 16px;
   font-weight: 400;
 }
 
-.subscriptions .subscriptions__body .subscriptions__plans {
+.subscriptions__plans {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -289,7 +328,7 @@
           justify-content: space-between;
 }
 
-.subscriptions .subscriptions__body .subscriptions__plans .subscriptions__card {
+.subscriptions__plans .subscriptions__card {
   margin: 0 10px;
   padding: 4.7vh 0 5.6vh 0;
   display: -webkit-box;
@@ -316,12 +355,12 @@
   transition: 0.3s;
 }
 
-.subscriptions .subscriptions__body .subscriptions__plans .subscriptions__card .subscriptions__card-logo {
+.subscriptions__plans .subscriptions__card .subscriptions__card-logo {
   width: 120px;
   height: 120px;
 }
 
-.subscriptions .subscriptions__body .subscriptions__plans .subscriptions__card .subscriptions__card-name {
+.subscriptions__plans .subscriptions__card .subscriptions__card-name {
   color: #5e636b;
   font-family: "Maven Pro";
   font-size: 14px;
@@ -330,56 +369,51 @@
   letter-spacing: 0.7px;
 }
 
-.subscriptions .subscriptions__body .subscriptions__plans .subscriptions__card .subscriptions__card-price {
+.subscriptions__plans .subscriptions__card .subscriptions__card-price {
   position: relative;
 }
 
-.subscriptions .subscriptions__body .subscriptions__plans .subscriptions__card .subscriptions__card-price .subscriptions__card-price-dollar {
+.subscriptions__plans .subscriptions__card .subscriptions__card-price .subscriptions__card-price-dollar {
   position: absolute;
   top: 23px;
   left: -10px;
   color: #4f4f6f;
-  font-family: "Maven Pro",  sans-serif;
   font-size: 16px;
   font-weight: 500;
   letter-spacing: -0.64px;
 }
 
-.subscriptions .subscriptions__body .subscriptions__plans .subscriptions__card .subscriptions__card-price .subscriptions__card-price-num {
+.subscriptions__plans .subscriptions__card .subscriptions__card-price .subscriptions__card-price-num {
   color: #4f4f6f;
-  font-family: "Maven Pro",  sans-serif;
   font-size: 18px;
   font-weight: 500;
   font-size: 60px;
   letter-spacing: -1.69px;
 }
 
-.subscriptions .subscriptions__body .subscriptions__plans .subscriptions__card .subscriptions__card-price .subscriptions__card-price-period {
+.subscriptions__plans .subscriptions__card .subscriptions__card-price .subscriptions__card-price-period {
   color: #4f4f6f;
-  font-family: "Maven Pro",  sans-serif;
   font-size: 18px;
   font-weight: 500;
   letter-spacing: -0.51px;
 }
 
-.subscriptions .subscriptions__body .subscriptions__plans .subscriptions__card .subscriptions__card-definition {
+.subscriptions__plans .subscriptions__card .subscriptions__card-definition {
   max-width: 300px;
   color: #9fa4af;
-  font-family: "Maven Pro",  sans-serif;
   font-size: 16px;
   font-weight: 400;
   line-height: 25px;
   margin: 0 1vh 1vh 1vh;
 }
 
-.subscriptions .subscriptions__body .subscriptions__plans .subscriptions__card .subscriptions__card-btn {
+.subscriptions__plans .subscriptions__card .subscriptions__card-btn {
   width: 190px;
   height: 50px;
   border-radius: 25px;
   border: 1px solid #d7dbe8;
   text-transform: uppercase;
   color: #c2c9db;
-  font-family: "Maven Pro";
   font-size: 12px;
   font-weight: 700;
   line-height: 47px;
@@ -389,15 +423,15 @@
 }
 
 .card-logo1 {
-  background: url(../images/free-logo.png) no-repeat center;
+  background: url(../images/free-logo.png) no-repeat center/contain;
 }
 
 .card-logo2 {
-  background: url(../images/standart-logo.png) no-repeat center;
+  background: url(../images/standart-logo.png) no-repeat center/contain;
 }
 
 .card-logo3 {
-  background: url(../images/personal-logo.png) no-repeat center;
+  background: url(../images/personal-logo.png) no-repeat center/contain;
 }
 
 .subscriptions__card:hover {
@@ -458,7 +492,6 @@
 }
 
 .cta .cta_body .cta__pre-title {
-  font-family: "Maven Pro", sans-serif;
   font-size: 1.4rem;
   font-weight: 700;
   text-transform: uppercase;
@@ -466,7 +499,6 @@
 }
 
 .cta .cta_body .cta__title {
-  font-family: "Maven Pro", sans-serif;
   font-size: 60px;
   font-weight: 500;
   letter-spacing: -1.69px;
@@ -474,7 +506,6 @@
 
 .cta .cta_body .cta__buttons {
   padding: 3vh;
-  font-family: "Maven Pro", sans-serif;
 }
 
 .cta .cta_body .cta__buttons .cta__btn {
@@ -525,7 +556,6 @@
 
 footer {
   width: 100%;
-  height: 130px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -541,15 +571,15 @@ footer {
           align-items: center;
 }
 
-footer .footer__line {
+.footer__line {
   display: block;
   height: 1px;
   width: 90%;
   background-color: #777;
-  margin-top: -20px;
+  margin-top: 1px;
 }
 
-footer .footer__bottom {
+.footer__bottom {
   width: 90%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -560,101 +590,271 @@ footer .footer__bottom {
   margin: 10px 0;
 }
 
-footer .footer__bottom .footer__social-links {
+.footer__bottom .footer__social-links {
   color: #777;
 }
 
-footer .footer__starter {
+.footer__starter {
   display: block;
   margin-left: 60px;
-  text-align: center;
+  padding-top: 14px;
+  background-color: #6e45e2;
   width: 150px;
   height: 50px;
+  text-align: center;
+  text-decoration: none;
+  border: 1px solid #ffffff;
   border-radius: 25px;
+}
+
+.footer__starter span {
+  font-size: 1.2rem;
+  color: #ffffff;
   text-transform: uppercase;
-  border: 1px solid #d7dbe8;
-  background-color: #6e45e2;
-  font-weight: 700;
+  font-family: "Maven Pro", sans-serif;
+  font-weight: 500;
   letter-spacing: 0.6px;
 }
 
-footer .footer__starter span {
-  font-size: 1.2rem;
-  position: relative;
-  top: -3px;
-  left: 0;
-  color: #ffffff;
+.footer__bottom {
+  font-size: 1.8rem;
+  padding: 16px 0;
 }
 
-.footer__navigation-row {
-  margin-top: 0;
+.footer__bottom .footer_copyright {
+  padding: 6px 0 0 0;
 }
 
-html {
-  font-size: 10px;
+.footer__bottom .footer__social-links {
+  font-size: 2.7rem;
+}
+
+.footer__bottom .footer__social-links .fa {
+  color: #777;
 }
 
 @media (max-width: 1199px) {
-  .header__navigation-row {
-    margin-top: 2vh;
-    height: 70px;
-    width: 95%;
+  nav.header__nav {
+    width: 65%;
   }
-  .header__navigation-row span {
-    font-size: 27px;
-    line-height: 29px;
-    position: absolute;
-    top: 40%;
+  .header__nav-a {
+    font-size: 1.4rem;
   }
-  .header__navigation-row .header__links {
-    width: 75%;
-    max-width: 900px;
+  .header__starter_li {
+    font-size: 1.4rem;
   }
-  .header__navigation-row .header__links .header__nav ul {
-    font-size: 1.6rem;
+  .header__starter_li .header__starter {
+    margin-left: 5px;
   }
-  .header__navigation-row .header__links .header__nav ul li .header__nav-a {
-    font-size: 1.8rem;
-    height: 60px;
-    padding: 0 5px;
+  .footer__bottom {
+    padding: 16px 0;
   }
-  .header__navigation-row .header__links .header__nav ul li .header__nav-a:hover {
-    border-bottom: 3px solid #fff;
+  .footer__bottom .footer_copyright {
+    font-size: 1.4rem;
+    padding: 6px 0 0 0;
   }
-  .header__navigation-row .header__links .header__nav ul li .header__starter {
-    display: block;
-    margin-left: 30px;
-    padding-top: 14px;
-    text-align: center;
-    width: 150px;
-    height: 50px;
-    color: inherit;
-    text-decoration: none;
-    border-radius: 25px;
-    border: 1px solid #ffffff;
-    text-transform: uppercase;
+  .footer__bottom .footer__social-links {
+    font-size: 3.4rem !important;
   }
   .footer__starter {
-    margin-left: 30px;
-    border-radius: 25px;
-    text-transform: uppercase;
-    border: 1px solid #d7dbe8;
-    background-color: #6e45e2;
-    font-weight: 700;
-    letter-spacing: 0.6px;
-  }
-  .footer__starter span {
-    font-size: 1.2rem;
-    position: relative;
-    top: -3px;
-    left: 0;
-    color: #ffffff;
+    border: 1px dotted red;
+    margin-left: 5px;
   }
 }
 
-* {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  font-family: "Maven Pro", sans-serif;
+@media (max-width: 991px) {
+  .visible-lg {
+    display: none;
+  }
+  .header__m-fa {
+    display: block;
+    color: #fff;
+    font-size: 3.4rem;
+  }
+  .m-menu .close-m-menu {
+    color: #fff;
+    font-size: 8rem;
+    position: absolute;
+    top: 5%;
+    right: 10%;
+    cursor: pointer;
+  }
+  .m-menu_active {
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  ul {
+    color: #fff;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    list-style-type: none;
+  }
+  ul li .header__nav-a {
+    font-size: 3rem;
+    line-height: 55px;
+    display: block;
+    height: 10vh;
+    color: inherit;
+    text-decoration: none;
+    padding: 0 7px;
+  }
+  ul .header__starter_li a {
+    font-size: 3rem;
+    line-height: 55px;
+    display: block;
+    height: 80px;
+    width: 250px;
+  }
+  .footer__navigation-row .header__logo {
+    margin: 0 auto;
+    position: relative;
+    top: 0;
+    right: 10%;
+  }
+}
+
+@media (max-width: 767px) {
+  .subscriptions__body {
+    height: auto;
+    padding: 5vh 0;
+  }
+  .subscriptions__body .subscriptions__header-text {
+    width: 375px;
+    height: 161px;
+    margin-bottom: 1.5vh;
+  }
+  .subscriptions__body .subscriptions__header-text .subscriptions__pre-title {
+    font-size: 1.4rem;
+  }
+  .subscriptions__body .subscriptions__header-text .subscriptions__title {
+    margin-bottom: 2.4vh;
+  }
+  .subscriptions__body .subscriptions__header-text .subscriptions__subtitle {
+    width: 384px;
+  }
+  .subscriptions__body .subscriptions__plans {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .subscriptions__body .subscriptions__plans .subscriptions__card {
+    margin: 3vh 0;
+    padding: 4.7vh 0 5.6vh 0;
+    width: 440px;
+  }
+  .subscriptions__body .subscriptions__plans .subscriptions__card .subscriptions__card-name {
+    font-size: 1.4rem;
+  }
+  .subscriptions__body .subscriptions__plans .subscriptions__card .subscriptions__card-definition {
+    max-width: 300px;
+    margin: 0 1vh 1vh 1vh;
+  }
+  .subscriptions__body .subscriptions__plans .subscriptions__card .subscriptions__card-btn {
+    width: 190px;
+    height: 50px;
+    border-radius: 25px;
+  }
+  .footer__bottom {
+    padding: 16px 0;
+  }
+  .footer__bottom .footer_copyright {
+    font-size: 1.4rem;
+    padding: 0;
+  }
+  .footer__bottom .footer__social-links {
+    margin-left: 20px;
+    min-width: 158px;
+    font-size: 3.4rem !important;
+  }
+}
+
+@media (max-width: 575px) {
+  .header__hero {
+    width: 300px;
+  }
+  .header__hero .header__hero-present {
+    font-size: 1.2rem;
+  }
+  .header__hero .header__hero-title {
+    font-size: 7rem;
+  }
+  .header__hero .header__hero-subtitle {
+    width: 300px;
+    line-height: 20px;
+  }
+  .cta__title {
+    font-size: 5.0rem !important;
+    font-weight: 500;
+    letter-spacing: -1.69px;
+  }
+  .subscriptions__body {
+    height: auto;
+    padding: 5vh 0;
+  }
+  .subscriptions__body .subscriptions__header-text {
+    width: 300px;
+    height: auto;
+    margin-bottom: 1.5vh;
+  }
+  .subscriptions__body .subscriptions__header-text .subscriptions__pre-title {
+    font-size: 1.4rem;
+  }
+  .subscriptions__body .subscriptions__header-text .subscriptions__title {
+    margin-bottom: 2.4vh;
+  }
+  .subscriptions__body .subscriptions__header-text .subscriptions__subtitle {
+    width: 290px;
+  }
+  .subscriptions__body .subscriptions__plans {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .subscriptions__body .subscriptions__plans .subscriptions__card {
+    margin: 3vh 0;
+    padding: 4.7vh 0 5.6vh 0;
+    width: 290px;
+    height: 65vh;
+    min-height: 432px;
+  }
+  .subscriptions__body .subscriptions__plans .subscriptions__card .subscriptions__card-name {
+    font-size: 1.4rem;
+  }
+  .subscriptions__body .subscriptions__plans .subscriptions__card .subscriptions__card-definition {
+    max-width: 270px;
+    margin: 1vh;
+  }
+  .cta__btn {
+    margin-bottom: 10px !important;
+  }
+  .footer__navigation-row .header__logo {
+    margin: 0 auto;
+    position: relative;
+    top: 0;
+    right: 20%;
+  }
 }
 /*# sourceMappingURL=style.css.map */

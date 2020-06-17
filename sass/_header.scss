@@ -2,6 +2,7 @@
    font-family: "Maven Pro",  sans-serif;
    color: #fff;
    height: 100vh;
+   min-height: 430px;
    position: relative;
    background: url(../images/glasses.png);
    background-size: cover;
@@ -29,7 +30,6 @@
 
 .header__navigation-row{ 
    //also uses in footer!!!!!!!!!!!!!!!!!!!!
-   margin-top: 3vh;
    height: 80px;
    width: 90%;
    display: flex;
@@ -39,58 +39,54 @@
       position: relative;      
       img{}
       span{
-         font-family: "Maven Pro", sans-serif;
-         font-size: 30px;
+         font-size: 3rem;
          font-weight: 700;
-         line-height: 29px;
+         line-height: 33px;
          text-transform: uppercase;
          letter-spacing: 6px;
          position: absolute; 
          top: 40%;
       }
    }
-   .header__links{
+   
+}
+.header__nav{
       width: 65%; 
-      max-width: 900px;          
-      .header__nav{
-         ul{
-            font-size: 1.6rem;
-            display: flex;   
-            flex-wrap: wrap;
-            justify-content: space-between;
-            align-items: center; 
-            list-style-type: none;                      
-            li{
-               .header__nav-a{     
-                  line-height: 55px;
-                  display: block;  
-                  height: 60px;           
-                  color: inherit;
-                  text-decoration: none;                        
-                  padding: 0 7px;
-               }
-                .header__nav-a:hover{
-                   border-bottom: 3px solid #fff;
-               }
-
-               .header__starter {         
-                  display: block;
-                  margin-left: 60px;
-                  padding-top: 14px;
-                  text-align: center;
-                  width: 150px;
-                  height: 50px;
-                  color: inherit;
-                  text-decoration: none;  
-                  border-radius: 25px;
-                  border: 1px solid #ffffff;
-                  text-transform: uppercase;
-               }
-            }                 
-         }
-      }  
-          
+      max-width: 900px;                   
+      ul{
+         font-size: 1.6rem;
+         display: flex;   
+         flex-wrap: wrap;
+         justify-content: space-between;
+         align-items: center; 
+         list-style-type: none;                      
+         li{
+            a{     
+               line-height: 55px;
+               display: block;  
+               height: 60px;           
+               color: inherit;
+               text-decoration: none;                        
+               padding: 0 7px;
+            }
+            a:hover{
+               border-bottom: 3px solid #fff;
+            }
+         }                 
+      }          
    }
+.header__starter {         
+   display: block;
+   margin-left: 60px;
+   padding-top: 14px;
+   text-align: center;
+   width: 150px;
+   height: 50px;
+   color: inherit;
+   text-decoration: none;  
+   border-radius: 25px;
+   border: 1px solid #ffffff;
+   text-transform: uppercase;
 }
 .header__hero{
    display: flex;
@@ -126,11 +122,9 @@
       vertical-align: 5px;
       margin-left: 5px;
    }
-
    .header__hero-title{
       text-align: center;
       color: #ffffff;
-      font-family: "Maven Pro";
       font-size: 8.6rem;
       font-weight: 500;
       line-height: 72px;
@@ -140,7 +134,6 @@
       text-align: center;
       width: 383px;
       color: #ffffff;
-      font-family: "Maven Pro";
       font-size: 1.6rem;
       font-weight: 400;
       line-height: 26px;
@@ -162,5 +155,31 @@
          opacity: 0.7;
       }
    }
+}
+
+.header__m-fa {
+   display: none;
+   i{
+      fill: #fff;
+   }
+}
+.m-menu{
+   display: flex;
+   z-index: 10;
+   position: fixed;
+   align-items: center;
+   justify-content: center;
+
+   transition: 0.3s;
+   transform: translateX(100%);
+
+   right: 0;
+   top: 0;
+   height: 100vh;
+   width: 100%;
+   text-align: center;
+   font-size: 4rem;
+   line-height: 6rem;
+   background-image: linear-gradient(90deg, #88d3ce1c 0%, #6e45e2 20%);
 }
 

@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
    <meta charset="UTF-8">
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <meta name="viewport" content="width=device-width">
    <title>Landing with transparrent logo</title>
    <link href="css/reset.css" rel="stylesheet" type="text/css">
    <link href="css/style.css" rel="stylesheet" type="text/css">
@@ -11,6 +11,19 @@
       integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
 </head>
 <body>
+
+   <div class="m-menu">
+      <div class="close-m-menu">&times;</div>
+      <ul>         
+         <li><a href="#" class="header__nav-a m-menu__link">Home</a></li>
+         <li><a href="#" class="header__nav-a">Why MISOCIAL</a></li>
+         <li><a href="#" class="header__nav-a">Features</a></li>
+         <li><a href="#" class="header__nav-a">Articles</a></li>
+         <li><a href="#" class="header__nav-a">Pricing</a></li>
+         <li class="header__starter_li"><a href="#" class="header__starter">get started</a></li>
+      </ul>
+   </div>
+
    <header class="header">
       <div class="header__overlay">
          <!-- color -->
@@ -20,19 +33,20 @@
             <div class="header__logo">
                <img src="images/misocial-logo.png" alt="misocial-logo">
                <span>MISOCIAL</span>
-            </div> 
-           <div class="header__links">
-               <nav class="header__nav">
-                  <ul class="header__nav-ul">
-                     <li><a href="#" class="header__nav-a">Home</a></li>
-                     <li><a href="#" class="header__nav-a">Why MISOCIAL</a></li>
-                     <li><a href="#" class="header__nav-a">Features</a></li>
-                     <li><a href="#" class="header__nav-a">Articles</a></li>
-                     <li><a href="#" class="header__nav-a">Pricing</a></li>
-                     <li><a href="#" class="header__starter">get started</a></li>
-                  </ul>
-               </nav>
-           </div>
+            </div>          
+            <a href="#" class="header__m-fa">
+               <i class="fa fa-bars"></i>
+            </a>
+           <nav class="header__nav visible-lg">
+               <ul>
+                  <li><a href="#" class="header__nav-a">Home</a></li>
+                  <li><a href="#" class="header__nav-a">Why MISOCIAL</a></li>
+                  <li><a href="#" class="header__nav-a">Features</a></li>
+                  <li><a href="#" class="header__nav-a">Articles</a></li>
+                  <li><a href="#" class="header__nav-a">Pricing</a></li>
+                  <li class="header__starter_li"><a href="#" class="header__starter">get started</a></li>
+               </ul>
+           </nav>
          </div>
          <div class="header__hero">
             <div class="header__hero-present">
@@ -163,22 +177,20 @@
             <img src="images/misocial-logo.png" alt="misocial-logo">
             <span>MISOCIAL</span>
          </div>
-         <div class="header__links">
-            <nav class="header__nav">
-               <ul class="header__nav-ul">
-                  <li><a href="#" class="header__nav-a">Home</a></li>
-                  <li><a href="#" class="header__nav-a">Why MISOCIAL</a></li>
-                  <li><a href="#" class="header__nav-a">Features</a></li>
-                  <li><a href="#" class="header__nav-a">Articles</a></li>
-                  <li><a href="#" class="header__nav-a">Pricing</a></li>
-                  <li>
-                     <a href="#" class="header__nav-a footer__starter">
-                        <span>get started</span>                     
-                     </a>
-                  </li>
-               </ul>
-            </nav>
-         </div>
+         <nav class="header__nav visible-lg footer__block">
+            <ul>
+               <li><a href="#" class="header__nav-a">Home</a></li>
+               <li><a href="#" class="header__nav-a">Why MISOCIAL</a></li>
+               <li><a href="#" class="header__nav-a">Features</a></li>
+               <li><a href="#" class="header__nav-a">Articles</a></li>
+               <li><a href="#" class="header__nav-a">Pricing</a></li>
+               <li>
+                  <a href="#" class="footer__starter">
+                     <span>get started</span>                     
+                  </a>
+               </li>
+            </ul>
+         </nav>
       </div>
       <div class="footer__line"></div>
       <div class="footer__bottom">
@@ -193,5 +205,21 @@
          </div>
       </div>
    </footer>
+
+   <script> //doesn't work
+      $(function() {
+         var link = $('.m-menu__link');
+         var close = $('.close-m-menu');
+         var menu = $('.m-menu');
+         link.on('click', function(event) {
+            event.prevemtDefault();
+            menu.toggleClass('m-menu_active');
+         });
+         close.on('click', function(event) {
+            event.prevemtDefault();
+            menu.toggleClass('m-menu_active');
+         });
+      });
+   </script>
 </body>
 </html>

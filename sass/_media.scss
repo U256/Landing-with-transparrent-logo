@@ -1,67 +1,233 @@
-html{
-   font-size: 10px;
+@media (max-width: 1199px) {
+   nav.header__nav {
+      width: 65%;
+   }
+   .header__nav-a {
+      font-size: 1.4rem;
+   }
+   .header__starter_li {
+      font-size: 1.4rem;
+      .header__starter {
+         margin-left: 5px;
+      }
+   }
+
+   .footer__bottom {         
+         padding: 16px 0;
+         .footer_copyright {
+            font-size: 1.4rem;
+            padding: 6px 0 0 0;
+         }
+         .footer__social-links {
+            font-size: 3.4rem !important;
+         }
+      }
+   .footer__starter {
+      border: 1px dotted red;
+      margin-left: 5px;
+   }
+   
 }
 
-@media(max-width: 1199px){
-   .header__navigation-row{ 
-   margin-top: 2vh;
-   height: 70px;
-   width: 95%;
-   span{
-         font-size: 27px;
-         line-height: 29px;
-         position: absolute; 
-         top: 40%;
-      }      
-      .header__links{
-         width: 75%; 
-         max-width: 900px;          
-         .header__nav{
-            ul{
-               font-size: 1.6rem;                  
-               li{
-                  .header__nav-a{ 
-                     font-size: 1.8rem;    
-                     height: 60px;                               
-                     padding: 0 5px;
-                  }
-                  .header__nav-a:hover{
-                     border-bottom: 3px solid #fff;
-                  }
-                  .header__starter {         
-                     display: block;
-                     margin-left: 30px;
-                     padding-top: 14px;
-                     text-align: center;
-                     width: 150px;
-                     height: 50px;
-                     color: inherit;
-                     text-decoration: none;  
-                     border-radius: 25px;
-                     border: 1px solid #ffffff;
-                     text-transform: uppercase;
-                  }
-               }                 
+@media (max-width: 991px) {
+   .visible-lg {
+      display: none;
+   }
+
+   .header__m-fa {
+      display: block;
+      color: #fff;
+      font-size: 3.4rem;
+      
+   }
+   .m-menu{
+      
+      .close-m-menu{
+         color: #fff;
+         font-size: 8rem;
+         position: absolute;
+         top: 5%;
+         right: 10%;
+         cursor: pointer;
+      }    
+   }   
+
+
+
+   //!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+   .m-menu_active{
+      transition: 0.3s;
+      transform: translateX(0);
+   }
+   //!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+   
+   
+   ul{
+      color: #fff;
+      display: flex;   
+      flex-direction: column;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center; 
+      list-style-type: none;                  
+      li{
+         .header__nav-a{     
+            font-size: 3rem;
+            line-height: 55px;
+            display: block;  
+            height: 10vh;           
+            color: inherit;
+            text-decoration: none;                        
+            padding: 0 7px;
+         }
+      }     
+         .header__starter_li{
+         a{
+            font-size: 3rem;
+            line-height: 55px;
+            display: block;  
+            height: 80px; 
+            width: 250px;
+         }
+      }              
+   }  
+   
+   .footer__navigation-row {
+      .header__logo {
+         margin: 0 auto;
+         position: relative;
+         top: 0;
+         right: 10%;
+      } 
+   }
+}
+
+
+@media (max-width: 767px) {
+   .subscriptions__body{
+      height: auto;
+      padding: 5vh 0;   
+      .subscriptions__header-text{
+         width: 375px;
+         height: 161px;
+         margin-bottom: 1.5vh;
+         .subscriptions__pre-title{
+            font-size: 1.4rem;
+         }
+         .subscriptions__title{
+            margin-bottom: 2.4vh;
+         }
+         .subscriptions__subtitle{
+            width: 384px;
+         }
+      }
+      .subscriptions__plans{
+         flex-direction: column;
+         align-items: center;             
+         .subscriptions__card{
+            margin: 3vh 0;
+            padding: 4.7vh 0 5.6vh 0;  
+            width: 440px;
+            .subscriptions__card-name{
+               font-size: 1.4rem;
             }
-         }            
+            .subscriptions__card-definition{
+               max-width: 300px;
+               margin: 0 1vh 1vh 1vh;
+            }
+            .subscriptions__card-btn{
+               width: 190px;
+               height: 50px;
+               border-radius: 25px;    
+            }
+         }
       }
    }
-   .footer__starter{
-         margin-left: 30px;
-         border-radius: 25px;
-         text-transform: uppercase;
-         border: 1px solid #d7dbe8;
-         background-color: #6e45e2;           
-         font-weight: 700;
-         letter-spacing: 0.6px;
-      span{
-         font-size: 1.2rem;
-         position: relative;
-         top: -3px; left: 0;
-         color: #ffffff;
+
+   .footer__bottom {         
+      padding: 16px 0;
+      .footer_copyright {
+         font-size: 1.4rem;
+         padding: 0;
+      }
+      .footer__social-links {
+         margin-left: 20px;
+         min-width: 158px;
+         font-size: 3.4rem !important;
       }
    }
 }
-@media(max-width: 991px){
+
+
+@media (max-width: 575px) {
    
+   .header__hero{
+   width: 300px;
+   .header__hero-present{            
+      font-size: 1.2rem;
+   }
+   .header__hero-title{
+      font-size: 7rem;
+   }
+   .header__hero-subtitle{
+      width: 300px;
+      line-height: 20px;
+   }
+}
+   .cta__title{
+         font-size: 5.0rem !important;
+         font-weight: 500;
+         letter-spacing: -1.69px;
+      }
+
+   .subscriptions__body{
+      height: auto;
+      padding: 5vh 0;   
+      .subscriptions__header-text{
+         width: 300px;
+         height: auto;
+         margin-bottom: 1.5vh;
+         .subscriptions__pre-title{
+            font-size: 1.4rem;
+         }
+         .subscriptions__title{
+            margin-bottom: 2.4vh;
+         }
+         .subscriptions__subtitle{
+            width: 290px;
+         }
+      }
+      .subscriptions__plans{
+         flex-direction: column;
+         align-items: center;             
+         .subscriptions__card{
+            margin: 3vh 0;
+            padding: 4.7vh 0 5.6vh 0;  
+            width: 290px;
+            height: 65vh;
+            min-height: 432px;
+            .subscriptions__card-name{
+               font-size: 1.4rem;
+            }
+
+            .subscriptions__card-definition{
+               max-width: 270px;
+               margin: 1vh;
+            }
+         }
+      }
+   }
+
+   .cta__btn{
+      margin-bottom: 10px !important;
+   }
+   
+   .footer__navigation-row {
+      .header__logo {
+         margin: 0 auto;
+         position: relative;
+         top: 0;
+         right: 20%;
+      } 
+   }
 }
