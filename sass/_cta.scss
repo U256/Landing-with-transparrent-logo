@@ -1,6 +1,9 @@
 .cta{
+   position: relative;
+   background: url(../images/world-map.png) no-repeat center;
+   background-size: auto;
 
-   .cta__overlay{
+   &__overlay{
       background-image: linear-gradient(-60deg, #88d3ce 0%, #6e45e2 100%);
       position: absolute;
       top: 0; left: 0;
@@ -9,10 +12,9 @@
       opacity: 0.8;
       z-index: 0;
    }
-   position: relative;
-   background: url(../images/world-map.png) no-repeat center;
-   background-size: auto;
-   .cta_body{      
+
+   &__body{
+      padding: 15px;      
       position: relative;
       z-index: 1;
       color: #ffffff;
@@ -22,59 +24,83 @@
       justify-content: center;
       align-items: center;
       text-align: center;
-      .cta__pre-title{
-         font-size: 1.4rem;
+   }
+
+   &__pre-title{
+      padding-top: 20px;
+      font-size: 1.4rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.7px;
+   }
+
+   &__title{
+      padding: 20px 0;
+      font-size: 60px;
+      font-weight: 500;
+      letter-spacing: -1.69px;
+   }
+
+   &__buttons{        
+      padding: 3vh;      
+   }
+
+   &__btn{
+      margin: 0 6px;
+      outline: none;
+      display: inline;
+      padding: 5px 0 9px 0;
+      border: none;
+      width: 190px;
+      height: 50px;
+      border-radius: 25px; 
+      background-color: #fff;
+      transition: 0.3s;
+      p{
+         color: #868b97;
+         font-size: 12px;
          font-weight: 700;
          text-transform: uppercase;
-         letter-spacing: 0.7px;
+         letter-spacing: 0.6px;
+      }            
+   }
+
+   &__btn:hover{
+      outline: none;
+      display: inline;
+      padding: 5px 0 9px 0;
+      border: none;
+      width: 190px;
+      height: 50px;
+      border-radius: 25px; 
+      background-color: #6e45e2;
+      transition: 0.3s;
+      cursor: pointer;
+      p{ 
+         color: #ffffff;
+         font-family: "Maven Pro", sans-serif;
+         font-size: 12px;
+         font-weight: 700;
+         text-transform: uppercase;
+         letter-spacing: 0.6px;
       }
-      .cta__title{
-         font-size: 60px;
-         font-weight: 500;
-         letter-spacing: -1.69px;
+   }  
+}
+
+@media (max-width: 575px) {
+   .cta{
+      &__body {
+         height: auto;
+         min-height: 80vh;
       }
-      .cta__buttons{        
-         padding: 3vh;
-         .cta__btn{
-            margin: 0 6px;
-            outline: none;
-            display: inline;
-            padding: 5px 0 9px 0;
-            border: none;
-            width: 190px;
-            height: 50px;
-            border-radius: 25px; 
-            background-color: #fff;
-            transition: 0.3s;
-            p{
-               color: #868b97;
-               font-family: "Maven Pro", sans-serif;
-               font-size: 12px;
-               font-weight: 700;
-               text-transform: uppercase;
-               letter-spacing: 0.6px;
-            }            
-         }
-         .cta__btn:hover{
-            outline: none;
-            display: inline;
-            padding: 5px 0 9px 0;
-            border: none;
-            width: 190px;
-            height: 50px;
-            border-radius: 25px; 
-            background-color: #6e45e2;
-            transition: 0.3s;
-            cursor: pointer;
-            p{ 
-               color: #ffffff;
-               font-family: "Maven Pro", sans-serif;
-               font-size: 12px;
-               font-weight: 700;
-               text-transform: uppercase;
-               letter-spacing: 0.6px;
-            }
-         }        
-      }
+   }
+   
+   .cta__title{
+      font-size: 5.0rem;
+      font-weight: 500;
+      letter-spacing: -1.69px;
+   }
+   .cta__btn{
+      margin-bottom: 10px;
    }
 }

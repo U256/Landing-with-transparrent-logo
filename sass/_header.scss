@@ -1,23 +1,22 @@
-.header{
-   font-family: "Maven Pro",  sans-serif;
+.header { 
    color: #fff;
    height: 100vh;
-   min-height: 430px;
+   min-height: 460px;
    position: relative;
-   background: url(../images/glasses.png);
-   background-size: cover;
-   background-position: center;
-   padding-bottom: 20px;
-   .header__overlay{
+   background: url(../images/glasses.png) center/cover no-repeat;
+
+   &__overlay {
       position: absolute;
-      top: 0; left: 0;
+      top: 0;
+      left: 0;
       height: 100%;
       width: 100%;
       opacity: 0.8;
       z-index: 0;
       background-image: linear-gradient(-60deg, #88d3ce 0%, #6e45e2 100%);
    }
-   .header__body { 
+
+   &__body {
       height: 100%;
       position: relative;
       z-index: 1;
@@ -26,122 +25,86 @@
       justify-content: space-between;
       align-items: center;
    }
-}     
+}
 
-.header__navigation-row{ 
-   //also uses in footer!!!!!!!!!!!!!!!!!!!!
-   height: 80px;
-   width: 90%;
-   display: flex;
-   align-items: center;
-   justify-content: space-between;
-   .header__logo{  
-      position: relative;      
-      img{}
-      span{
-         font-size: 3rem;
-         font-weight: 700;
-         line-height: 33px;
-         text-transform: uppercase;
-         letter-spacing: 6px;
-         position: absolute; 
-         top: 40%;
-      }
+.header__shield{
+      display: none;
    }
-   
+
+.header-navigation-row {
+   padding: 60px 50px 0;
+   width: 100%;
+   // &__logo {
+   //    img {}
+   //    .name {}
+   // }
+
+   // &__nav {
+      
+   // }
 }
-.header__nav{
-      width: 65%; 
-      max-width: 900px;                   
-      ul{
-         font-size: 1.6rem;
-         display: flex;   
-         flex-wrap: wrap;
-         justify-content: space-between;
-         align-items: center; 
-         list-style-type: none;                      
-         li{
-            a{     
-               line-height: 55px;
-               display: block;  
-               height: 60px;           
-               color: inherit;
-               text-decoration: none;                        
-               padding: 0 7px;
-            }
-            a:hover{
-               border-bottom: 3px solid #fff;
-            }
-         }                 
-      }          
-   }
-.header__starter {         
-   display: block;
-   margin-left: 60px;
-   padding-top: 14px;
-   text-align: center;
-   width: 150px;
-   height: 50px;
+
+// .header__nav-ul{
+//    li{
+//       a{
+//
+//       }
+//    }
+// }
+
+.header__starter {
    color: inherit;
-   text-decoration: none;  
-   border-radius: 25px;
-   border: 1px solid #ffffff;
-   text-transform: uppercase;
 }
-.header__hero{
+
+.header__burger {
+   display: none;
+   position: relative;
+   width: 45px; height: 45px;
+   margin: 7px 7px 0 0;
+}
+
+.header__hero {
    display: flex;
    flex-direction: column;
    justify-content: space-between;
    align-items: center;
+   text-align: center;
    width: 491px;
    height: 215px;
-   .header__hero-present{            
-      color: #ffffff;
-      font-family: "Maven Pro";
+
+   .hero-present {
       font-size: 1.4rem;
       font-weight: 700;
       text-transform: uppercase;
       letter-spacing: 0.7px;
+
+      &:before, &:after {
+         content: '';
+         width: 20px;
+         height: 1px;
+         background-color: #fff;
+         display: inline-block;
+         vertical-align: 5px;
+         margin: 0 5px;
+      }
    }
-   .header__hero-present:before  {
-      content: '';
-      width: 20px;
-      height: 1px;
-      background-color: #fff;
-      display: inline-block;
-      vertical-align: 5px;
-      margin-right: 5px;
-   }
-   .header__hero-present:after {
-      content: '';
-      width: 20px;
-      height: 1px;
-      background-color: #fff;
-      display: inline-block;
-      vertical-align: middle;
-      vertical-align: 5px;
-      margin-left: 5px;
-   }
-   .header__hero-title{
-      text-align: center;
-      color: #ffffff;
+
+   .hero-title {
       font-size: 8.6rem;
       font-weight: 500;
-      line-height: 72px;
       letter-spacing: -2.42px;
    }
-   .header__hero-subtitle{
-      text-align: center;
-      width: 383px;
-      color: #ffffff;
+
+   .hero-subtitle {
       font-size: 1.6rem;
-      font-weight: 400;
-      line-height: 26px;
+      line-height: 2.6rem;
+      max-width: 383px;
    }
 }
-.header__scroll-down{
-   button{
-      border: none; 
+
+.header__scroll-down {
+   button {
+      border: none;
       outline: none;
       width: 64px;
       height: 64px;
@@ -149,7 +112,8 @@
       border-radius: 50%;
       background-color: #ffffff;
       margin-bottom: 4vh;
-      img{                
+
+      img {
          margin-top: 4px;
          width: 26px;
          opacity: 0.7;
@@ -157,29 +121,142 @@
    }
 }
 
-.header__m-fa {
-   display: none;
-   i{
-      fill: #fff;
+
+
+@media(max-width: 1199px) {
+   .header-navigation-row {
+      padding: 30px 15px 0;
    }
 }
-.m-menu{
-   display: flex;
-   z-index: 10;
-   position: fixed;
-   align-items: center;
-   justify-content: center;
 
-   transition: 0.3s;
-   transform: translateX(100%);
+@media (max-width: 991px) {
 
-   right: 0;
-   top: 0;
-   height: 100vh;
-   width: 100%;
-   text-align: center;
-   font-size: 4rem;
-   line-height: 6rem;
-   background-image: linear-gradient(90deg, #88d3ce1c 0%, #6e45e2 20%);
+   .header__shield{
+      position: fixed; right: 0; top: 0;
+      height: 100vh;
+      width: 100%;
+      z-index: 2;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: transform 0.6s ease;
+      transform: translate(100%, 0);
+      font-size: 3rem;
+      line-height: 6rem;
+      background-image: linear-gradient(90deg, #a6c2e705 0%, #6f45e2e3 15%);
+      background-image: linear-gradient(90deg, #a6c2e71a 0% ,#ca69b5ce 10%, #ad1ae7f5 35%, #6f45e2 80%);
+
+      &_active {
+         transform: translate(0, 0);
+      }
+   }
+   
+   .header__burger {
+      display: block;
+      color: #fff;
+      z-index: 10;
+      font-size: 3.4rem;
+      transition: 0.3s;
+      background: url(../images/burger-icon.svg) center/contain no-repeat;
+
+      &_active {
+         background-image: url(../images/close-icon.svg);
+         background-size: 32px;
+      }
+   }
+
+   .header__nav-ul{
+      transition: opacity 0.4s ease 0.2s;
+      opacity: 0;
+      visibility: hidden;
+      width: 100%;
+      height: 90vh;
+      position: fixed;
+      left: 0; top: 0;
+      z-index: 6;
+      flex-direction: column;
+      justify-content: space-between;
+      padding-inline-start: 0px;
+
+      &_active {
+         visibility: visible;
+         opacity: 1;
+      }
+
+      li{
+         width: 280px;
+         margin: 0 auto;
+
+         &:first-child{
+            padding-top: 12vh;
+         }
+
+         .nav-a{      
+            font-size: 3rem;  
+            text-align: center; 
+            color: inherit;   
+            padding: 0;                  
+         }
+      }     
+
+      .header__starter-li{
+         padding-top: 0;
+         
+         .header__starter{
+            font-size: 3rem;
+            margin-left: 15px;
+            padding-bottom: 5px;
+            line-height: 4rem;
+            display: block;  
+            height: 70px; 
+            width: 250px;
+         }
+      }              
+   }  
 }
 
+@media (max-width: 575px) {
+
+   .header-navigation-row {
+      padding-top: 10px;
+   }
+   
+   .header__hero{
+      width: 300px;
+      height: 175px;
+
+      .hero-present{            
+         font-size: 1.2rem;
+      }
+      .hero-title{
+         font-size: 5.5rem;
+      }
+      .hero-subtitle{
+         width: 300px;
+         line-height: 20px;
+      }
+   }
+}
+
+@media (max-height: 510px) {
+
+   .header__nav-ul{
+      li{
+         &:first-child{
+            padding-top:0 ;
+         }
+
+         .nav-a{   
+            font-size: 2.4rem;
+            height: 40px;
+         }
+      }     
+
+      .header__starter-li{
+         .header__starter{
+            height: 40px;
+            padding-top: 0;
+         }
+      }              
+   }  
+}
