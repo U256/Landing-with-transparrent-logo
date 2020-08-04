@@ -14,7 +14,7 @@ html{
    
    &__logo {
       position: relative;
-      h1 {
+      h1, span {
          display: inline;
          font-size: 3rem;
          font-weight: 700;
@@ -94,8 +94,5 @@ a:-webkit-any-link {
       }
    }
 }
-
-
-
 
 
