@@ -54,7 +54,7 @@
          </div>
       </div>
    </header>
-   <section class="subscriptions">
+   <section id="subs1" class="subscriptions">
       <div class="subscriptions__header-row">
          <h2 class="subscriptions__pre-title">misocial</h2>
          <h2 class="subscriptions__title">Select a Plan</h2>
@@ -138,12 +138,12 @@
          <!-- color -->
       </div>
       <div class="cta__body">
-         <div class="cta__pre-title">
+         <h3 class="cta__pre-title">
             SOCAL MARKETING & ANALYTICS
-         </div>
-         <div class="cta__title">
+         </h3>
+         <h2 class="cta__title">
             Take control of your data
-         </div>
+         </h2>
          <div class="cta__buttons">
             <button class="cta__btn">
                <p>get started</p>
@@ -199,11 +199,18 @@
       });
    </script>
    <script>
-      $(document).ready(function () {
-         $('.header__scroll-button').click(function (e) {
-            document.getElementsByClassName("subscriptions")[0].scrollIntoView(top);
+      const smoothLink = document.querySelector('.header__scroll-button');
+
+      smoothLink.addEventListener('click', function (e) {
+         e.preventDefault();
+         const id = document.getElementById('subs1');
+
+         id.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
          });
       });
+
    </script>
 </body>
 

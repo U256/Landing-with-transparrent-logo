@@ -85,6 +85,8 @@ a:-webkit-any-link {
 }
 
 .header {
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
   color: #fff;
   height: 100vh;
   min-height: 460px;
